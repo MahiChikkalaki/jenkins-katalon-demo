@@ -21,22 +21,21 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('https://katalon-demo-cura.herokuapp.com/')
 
-WebUI.click(findTestObject('Object Repository/Katalon_Test/Page_CURA Healthcare Service/i_CURA Healthcare_fa fa-bars'))
+WebUI.click(findTestObject('Object Repository/Katalon_Test/New/Page_CURA Healthcare Service/i_CURA Healthcare_fa fa-bars'))
 
-WebUI.click(findTestObject('Object Repository/Katalon_Test/Page_CURA Healthcare Service/a_Login'))
+WebUI.click(findTestObject('Object Repository/Katalon_Test/New/Page_CURA Healthcare Service/a_Login'))
 
-WebUI.setText(findTestObject('Object Repository/Katalon_Test/Page_CURA Healthcare Service/input_Username_username'), 'John Doe')
+WebUI.click(findTestObject('Object Repository/Katalon_Test/New/Page_CURA Healthcare Service/span_Demo account_glyphicon glyphicon-user'))
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Katalon_Test/Page_CURA Healthcare Service/input_Password_password'), 
+WebUI.setText(findTestObject('Object Repository/Katalon_Test/New/Page_CURA Healthcare Service/input_Username_username'), 
+    'John Doe')
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Katalon_Test/New/Page_CURA Healthcare Service/input_Password_password'), 
     'g3/DOGG74jC3Flrr3yH+3D/yKbOqqUNM')
 
-WebUI.click(findTestObject('Object Repository/Katalon_Test/Page_CURA Healthcare Service/div_Login'))
+WebUI.rightClick(findTestObject('Object Repository/Katalon_Test/New/Page_CURA Healthcare Service/button_Login'))
 
-WebUI.verifyElementClickable(findTestObject('Object Repository/Katalon_Test/Page_CURA Healthcare Service/button_Login'))
-
-WebUI.rightClick(findTestObject('Object Repository/Katalon_Test/Page_CURA Healthcare Service/input_Password_password'))
-
-WebUI.click(findTestObject('Object Repository/Katalon_Test/Page_CURA Healthcare Service/button_Login'))
+WebUI.click(findTestObject('Object Repository/Katalon_Test/New/Page_CURA Healthcare Service/button_Login'))
 
 WebUI.closeBrowser()
 
