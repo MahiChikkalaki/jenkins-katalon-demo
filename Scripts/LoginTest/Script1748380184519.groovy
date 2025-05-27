@@ -19,13 +19,24 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('https://katalon.com/')
+WebUI.navigateToUrl('https://katalon-demo-cura.herokuapp.com/')
 
-WebUI.click(findTestObject('Object Repository/Katalon_Test/Page_Katalon AI-augmented Test Automation Platform/button_Accept All Cookies'))
+WebUI.click(findTestObject('Object Repository/Katalon_Test/Page_CURA Healthcare Service/i_CURA Healthcare_fa fa-bars'))
 
-WebUI.verifyElementText(findTestObject('Object Repository/Katalon_Test/Page_Katalon AI-augmented Test Automation Platform/a_Download Studio'), 
-    'Download Studio')
+WebUI.click(findTestObject('Object Repository/Katalon_Test/Page_CURA Healthcare Service/a_Login'))
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Katalon_Test/Page_Katalon AI-augmented Test Automation Platform/h1_Create and run your tests faster at any scale'), 
-    0)
+WebUI.setText(findTestObject('Object Repository/Katalon_Test/Page_CURA Healthcare Service/input_Username_username'), 'John Doe')
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Katalon_Test/Page_CURA Healthcare Service/input_Password_password'), 
+    'g3/DOGG74jC3Flrr3yH+3D/yKbOqqUNM')
+
+WebUI.click(findTestObject('Object Repository/Katalon_Test/Page_CURA Healthcare Service/div_Login'))
+
+WebUI.verifyElementClickable(findTestObject('Object Repository/Katalon_Test/Page_CURA Healthcare Service/button_Login'))
+
+WebUI.rightClick(findTestObject('Object Repository/Katalon_Test/Page_CURA Healthcare Service/input_Password_password'))
+
+WebUI.click(findTestObject('Object Repository/Katalon_Test/Page_CURA Healthcare Service/button_Login'))
+
+WebUI.closeBrowser()
 
